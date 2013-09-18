@@ -19,7 +19,7 @@ rm -f /etc/yum.repos.d/CentOS-ruby-custom.repo
 #
 # State information
 #
-rm -f /var/spool/cloud/*
+rm -rf /var/spool/cloud/*
 service postfix stop
 find /var/spool -type f -exec ~/truncate.sh {} \;
 rm -rf /tmp/*
@@ -89,7 +89,7 @@ rm -rf /root/.gem
 rm -f /root/*.tar
 rm -rf /root/files
 rm -f /root/*
-rm -f /root/.*_history /root/.vim* /root/.lesshst /root/.gemrc
+rm -rf /root/.*_history /root/.vim* /root/.lesshst /root/.gemrc
 rm -rf /root/.cache /root/.vim
 
 updatedb
