@@ -92,5 +92,14 @@ rm -f /root/*
 rm -rf /root/.*_history /root/.vim* /root/.lesshst /root/.gemrc
 rm -rf /root/.cache /root/.vim
 
-updatedb
+case $os in
+"centos"|"redhatenterpriseserver")
+  # fixes cloning problems on vmware
+  # see http://www.cyberciti.biz/tips/vmware-linux-lost-eth0-after-cloning-image.html
+  rm -f /etc/udev/rules.d/70-persistent-net.rules
+  ;;
+"ubuntu")
+  ;; 
+esac
+
 sync
