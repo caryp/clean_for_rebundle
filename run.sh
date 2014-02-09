@@ -11,7 +11,7 @@
 #
 # cpenniman@gmail.com
 #
-curl -L https://github.com/caryp/clean_for_rebundle/archive/master.tar.gz -o /root/clean_for_rebundle.tar.gz`
+curl -L https://github.com/caryp/clean_for_rebundle/archive/master.tar.gz -o /root/clean_for_rebundle.tar.gz
 cd /root
 tar xvzf clean_for_rebundle.tar.gz --strip-components=1
 ./clean.sh
