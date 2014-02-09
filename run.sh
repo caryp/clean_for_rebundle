@@ -1,5 +1,21 @@
-#!/bin/sh
-echo -n > $1
+#!/bin/bash
+#
+# Download latest clean_for_rebundle project tarball
+# then run it.  Needs to be run as root.
+#
+# Use the following command:
+#
+#  > curl -L https://raw2.github.com/caryp/clean_for_rebundle/master/run.sh | sudo bash
+#
+# Feel free to fork this and put it your own mirror.
+#
+# cpenniman@gmail.com
+#
+curl -L https://github.com/caryp/clean_for_rebundle/archive/master.tar.gz -o /root/clean_for_rebundle.tar.gz`
+cd /root
+tar xvzf clean_for_rebundle.tar.gz --strip-components=1
+./clean.sh
+
 
 # Copyright 2014 Cary Penniman
 #
