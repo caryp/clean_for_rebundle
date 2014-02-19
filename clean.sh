@@ -35,7 +35,7 @@ rm -f /etc/yum.repos.d/CentOS-ruby-custom.repo
 # State information
 #
 rm -rf /var/spool/cloud/*
-service postfix stop
+if [ `which postfix` ]; then service postfix stop ; fi
 find /var/spool -type f -exec ~/truncate.sh {} \;
 rm -rf /tmp/*
 rm -rf /tmp/.[^.]*
